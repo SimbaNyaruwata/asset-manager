@@ -112,12 +112,7 @@ export function LoginForm() {
         )}
       </Button>
 
-      <div className="text-center text-sm text-muted-foreground">
-        <p>Demo credentials for testing:</p>
-        <p className="font-mono text-xs mt-1">
-          Admin: admin@example.com / User: user@example.com
-        </p>
-      </div>
+      
     </form>
   )
 }
