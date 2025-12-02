@@ -34,8 +34,8 @@ export default async function UserAssetsPage() {
       date_purchased,
       cost,
       created_at,
-      categories!inner(name),
-      departments!inner(name)
+      categories(name),
+      departments(name)
     `)
     .eq('created_by', user.id)
     .order('created_at', { ascending: false })
@@ -90,13 +90,14 @@ export default async function UserAssetsPage() {
                     <TableRow key={asset.id}>
                       <TableCell className="font-medium">{asset.name}</TableCell>
                       <TableCell>
-                      <Badge variant="outline">
-                        {asset.categories?.map(c => c.name).join(", ")}
-                      </Badge>
-
-                      <Badge variant="secondary">
-                        {asset.departments?.map(d => d.name).join(", ")}
-                      </Badge>
+                        <Badge variant="outline">
+                          {asset.categories?.name || 'N/A'}
+                        </Badge>
+                      </TableCell>
+                      <TableCell>
+                        <Badge variant="secondary">
+                          {asset.departments?.name || 'N/A'}
+                        </Badge>
                       </TableCell>
                       <TableCell>{formatDateShort(asset.date_purchased)}</TableCell>
                       <TableCell>{formatCurrency(asset.cost)}</TableCell>

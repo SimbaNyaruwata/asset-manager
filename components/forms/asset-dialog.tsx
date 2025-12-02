@@ -24,7 +24,9 @@ export function AssetDialog() {
           Create Asset
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px]">
+      <DialogContent
+        className="sm:max-w-[600px] bg-white dark:bg-zinc-900 p-6 rounded-xl shadow-2xl border"
+      >
         <DialogHeader>
           <DialogTitle>Create New Asset</DialogTitle>
           <DialogDescription>
