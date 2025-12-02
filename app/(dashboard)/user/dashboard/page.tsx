@@ -172,37 +172,7 @@ export default async function UserDashboardPage() {
         </CardContent>
       </Card>
 
-      {/* Phase Status */}
-      <Card className="border-green-200 bg-green-50">
-        <CardHeader>
-          <CardTitle className="text-green-900">🎉 Phase 4 Complete!</CardTitle>
-          <CardDescription className="text-green-700">
-            User features are now fully functional!
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-2 text-sm text-green-900">
-            <li className="flex items-center gap-2">
-              <span className="text-green-600">✓</span> Create assets with full details
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-green-600">✓</span> View personal assets only
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-green-600">✓</span> Real-time dashboard statistics
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-green-600">✓</span> Recent assets display
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-green-600">✓</span> Asset categorization and tracking
-            </li>
-          </ul>
-          <p className="text-sm text-green-800 mt-4">
-            <strong>Your app is now fully functional!</strong> All core features are complete.
-          </p>
-        </CardContent>
-      </Card>
+     
     </div>
   )
 }
